@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask</title>
+</head>
+<body>
+    {% if ip  %}
+    <h1>Home page {{ip}}</h1>
+    <a href="{{url_for('index')}}">Index</a>
+    {% else  %}
+    <p> Hola </p>
+   
+    {% endif %}
+
+     {% for name in nombre %}
+    <h1>{{name}}</h1>
+    {% endfor %}
+</body>
+</html>

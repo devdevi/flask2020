@@ -1,14 +1,14 @@
-from flask import Flask, request
-app = Flask(__name__)
+from flask import Flask, request, make_response, redirect, render_template, Blueprint
+from flask_restful import Api
 
-@app.route('/')
-def home():
-	ip = request.remote_addr
-	return f"Tu ip es {ip}"
+def create_app():
+    app = Flask(__name__)
+    # app.config.from_object(config_filename)
+    from apps.Farmacias.views import farmacia_bp
+    app.register_blueprint(farmacia_bp, url_prefix='/')
 
-@app.route('/template')
-def template():
-	return render_template('home.html')
+    return app.run("0.0.0.0", port=80 , debug=True)
+
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", port=80 , debug=True)
+	create_app()

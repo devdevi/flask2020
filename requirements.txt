@@ -1,1 +1,6 @@
 Flask==1.1.2
+Flask-API
+Flask-RESTful
+requests
+simplejson
+requests_toolbelt
