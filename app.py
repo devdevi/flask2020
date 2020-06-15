@@ -1,9 +1,10 @@
-from flask import Flask, Response
+from flask import Flask, request
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-	return "There has been a changes"
+	ip = request.remote_addr
+	return f"Tu ip es {ip}"
 
 @app.route('/template')
 def template():

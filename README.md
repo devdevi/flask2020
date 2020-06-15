@@ -20,6 +20,7 @@ Then visit `http://localhost:5000` to play with the app.
     sudo docker run --rm -it -v $(pwd)/api_flask:/api_flask -p 5000:8080 flaskapi
     sudo docker run --rm -it -v $(pwd)/api_flask:/api_flask -p 5000:5000 flaskapi sh
     sudo docker run --rm -it -v $(pwd)/api_flask:/api_flask -p 5000:5000 --network=host flaskapi
+docker run --rm -it  -p 5000:80  --name=flask -v $PWD:/app flask sh
 ```
 ## Licensing
 
