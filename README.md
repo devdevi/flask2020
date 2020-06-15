@@ -43,3 +43,22 @@ verificar si el puerto 56733 esta en uso
 sudo nc localhost 56733 < dev/null; echo $?
 sudo bash start.sh
 ```
+### Debugging en Flask
+Debugging: es el proceso de identificar y corregir errores de programación.
+
+Para activar el debug mode escribir lo siguiente en la consola:
+
+```
+export FLASK_DEBUG=1
+echo $FLASK_DEBUG
+````
+### Request y Response
+Logging: es una grabación secuencial en un archivo o en una base de datos de todos los eventos que afectan a un proceso particular.
+
+Se utiliza en muchos casos distintos, para guardar información sobre la actividad de sistemas variados.
+
+Tal vez su uso más inmediato a nuestras actividades como desarrolladores web sería el logging de accesos al servidor web, que analizado da información del tráfico de nuestro sitio. Cualquier servidor web dispone de logs con los accesos, pero además, suelen disponer de otros logs, por ejemplo, de errores.
+
+Los sistemas operativos también suelen trabajar con logs, por ejemplo para guardar incidencias, errores, accesos de usuarios, etc.
+
+A través de el logs se puede encontrar información para detectar posibles problemas en caso de que no funcione algún sistema como debiera o se haya producido una incidencia de seguridad.
